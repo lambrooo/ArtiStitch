@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Artigianato Online</title>
+    <title>Checkout - Artigianato Online</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
@@ -71,70 +71,64 @@
         </div>
 
         <main class="max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 py-8">
-            <h1 class="text-3xl font-bold text-[#1b140e] mb-8">Your Shopping Cart</h1>
+            <h1 class="text-3xl font-bold text-[#1b140e] mb-8">Checkout</h1>
             
-            <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-12">
                 <div class="lg:col-span-2">
-                    <div class="divide-y divide-[#e5e0da]">
-                        <div class="py-6 flex flex-col md:flex-row gap-4">
-                            <img src="https://via.placeholder.com/100x100.png/f3ede7/1b140e?text=Product+1" alt="Product Image" class="w-24 h-24 object-cover rounded-md">
-                            <div class="flex-1 flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-lg font-medium text-[#1b140e]">Handwoven Scarf</h3>
-                                    <p class="text-sm text-[#97734e]">Color: Blue, Size: Large</p>
-                                </div>
-                                <p class="text-lg font-semibold text-[#1b140e] mt-2 md:mt-0">$48.00</p>
-                            </div>
-                            <div class="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6 mt-3 md:mt-0">
-                                <select class="form-select appearance-none block w-20 px-3 py-1.5 text-base font-normal text-[#1b140e] bg-white bg-clip-padding bg-no-repeat border border-solid border-[#dcd6cd] rounded-lg focus:outline-none"> <option>1</option> <option selected>2</option> <option>3</option> </select>
-                                <button class="text-sm text-[#b95c3a] hover:underline">Remove</button>
-                            </div>
+                    <h2 class="text-xl font-semibold text-[#1b140e] mb-4">Shipping Address</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div><label for="fullName" class="block text-sm font-medium text-[#3a3a3a] mb-1">Full Name</label><input type="text" id="fullName" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                        <div><label for="address" class="block text-sm font-medium text-[#3a3a3a] mb-1">Address</label><input type="text" id="address" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                        <div><label for="city" class="block text-sm font-medium text-[#3a3a3a] mb-1">City</label><input type="text" id="city" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                        <div><label for="postalCode" class="block text-sm font-medium text-[#3a3a3a] mb-1">Postal Code</label><input type="text" id="postalCode" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                        <div><label for="country" class="block text-sm font-medium text-[#3a3a3a] mb-1">Country</label><input type="text" id="country" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                        <div><label for="phone" class="block text-sm font-medium text-[#3a3a3a] mb-1">Phone</label><input type="tel" id="phone" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                    </div>
+
+                    <h2 class="text-xl font-semibold text-[#1b140e] mb-4">Billing Address</h2>
+                    <div class="mb-4"><label class="inline-flex items-center"><input type="checkbox" id="sameAsShipping" class="form-checkbox rounded text-[#b95c3a] focus:ring-[#b95c3a]" checked> <span class="ml-2 text-sm text-[#3a3a3a]">Same as shipping address</span></label></div>
+                    <div id="billingAddressFields" style="display: none;">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"> 
+                            <div><label for="billingFullName" class="block text-sm font-medium text-[#3a3a3a] mb-1">Full Name</label><input type="text" id="billingFullName" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                            <div><label for="billingAddress" class="block text-sm font-medium text-[#3a3a3a] mb-1">Address</label><input type="text" id="billingAddress" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
                         </div>
-                        <div class="py-6 flex flex-col md:flex-row gap-4">
-                            <img src="https://via.placeholder.com/100x100.png/f3ede7/1b140e?text=Product+2" alt="Product Image" class="w-24 h-24 object-cover rounded-md">
-                            <div class="flex-1 flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-lg font-medium text-[#1b140e]">Ceramic Mug Set</h3>
-                                    <p class="text-sm text-[#97734e]">Quantity: Set of 2</p>
-                                </div>
-                                <p class="text-lg font-semibold text-[#1b140e] mt-2 md:mt-0">$75.00</p>
-                            </div>
-                            <div class="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6 mt-3 md:mt-0">
-                                <select class="form-select appearance-none block w-20 px-3 py-1.5 text-base font-normal text-[#1b140e] bg-white bg-clip-padding bg-no-repeat border border-solid border-[#dcd6cd] rounded-lg focus:outline-none"> <option selected>1</option> <option>2</option> <option>3</option> </select>
-                                <button class="text-sm text-[#b95c3a] hover:underline">Remove</button>
-                            </div>
-                        </div>
-                        <div class="py-6 flex flex-col md:flex-row gap-4">
-                            <img src="https://via.placeholder.com/100x100.png/f3ede7/1b140e?text=Product+3" alt="Product Image" class="w-24 h-24 object-cover rounded-md">
-                            <div class="flex-1 flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-lg font-medium text-[#1b140e]">Leather Journal</h3>
-                                    <p class="text-sm text-[#97734e]">Personalization: "My Thoughts"</p>
-                                </div>
-                                <p class="text-lg font-semibold text-[#1b140e] mt-2 md:mt-0">$55.00</p>
-                            </div>
-                            <div class="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6 mt-3 md:mt-0">
-                                <select class="form-select appearance-none block w-20 px-3 py-1.5 text-base font-normal text-[#1b140e] bg-white bg-clip-padding bg-no-repeat border border-solid border-[#dcd6cd] rounded-lg focus:outline-none"> <option selected>1</option> <option>2</option> <option>3</option> </select>
-                                <button class="text-sm text-[#b95c3a] hover:underline">Remove</button>
-                            </div>
+                    </div>
+                    
+                    <h2 class="text-xl font-semibold text-[#1b140e] mb-4">Shipping Method</h2>
+                    <div class="space-y-3 mb-6">
+                        <label class="flex items-center p-3 border border-[#dcd6cd] rounded-lg hover:border-[#b95c3a] cursor-pointer"><input type="radio" name="shipping" class="form-radio text-[#b95c3a] focus:ring-[#b95c3a]" checked><span class="ml-3 text-[#1b140e] flex-1">Standard Shipping (5-7 days)</span><span class="text-[#1b140e]">$10.00</span></label>
+                        <label class="flex items-center p-3 border border-[#dcd6cd] rounded-lg hover:border-[#b95c3a] cursor-pointer"><input type="radio" name="shipping" class="form-radio text-[#b95c3a] focus:ring-[#b95c3a]"><span class="ml-3 text-[#1b140e] flex-1">Express Shipping (2-3 days)</span><span class="text-[#1b140e]">$25.00</span></label>
+                    </div>
+
+                    <h2 class="text-xl font-semibold text-[#1b140e] mb-4">Payment Information</h2>
+                    <div class="grid grid-cols-1 gap-4 mb-6">
+                        <div><label for="cardNumber" class="block text-sm font-medium text-[#3a3a3a] mb-1">Card Number</label><input type="text" id="cardNumber" placeholder="•••• •••• •••• ••••" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div><label for="expiryDate" class="block text-sm font-medium text-[#3a3a3a] mb-1">Expiry Date</label><input type="text" id="expiryDate" placeholder="MM/YY" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
+                            <div><label for="cvv" class="block text-sm font-medium text-[#3a3a3a] mb-1">CVV</label><input type="text" id="cvv" placeholder="•••" class="form-input w-full rounded-lg border-[#dcd6cd] focus:ring-[#b95c3a] focus:border-[#b95c3a]"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-[#f3ede7] p-6 rounded-lg shadow mt-8 lg:mt-0 h-fit">
                     <h2 class="text-xl font-semibold text-[#1b140e] mb-6">Order Summary</h2>
-                    <div class="space-y-3">
-                        <div class="flex justify-between text-[#1b140e]"><span>Subtotal</span><span>$185.00</span></div> 
-                        <div class="flex justify-between text-[#1b140e]"><span>Shipping (Estimate)</span><span>$10.00</span></div>
-                        <div class="border-t border-[#dcd6cd] my-3"></div>
-                        <div class="flex justify-between text-xl font-bold text-[#1b140e]"><span>Total</span><span>$195.00</span></div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-between text-[#1b140e]"><div class="flex items-center gap-2"><img src="https://via.placeholder.com/40x40.png/dcd6cd/1b140e?text=HS" class="rounded-sm"><span class="text-sm">Handwoven Scarf</span></div><span>$48.00</span></div>
+                        <div class="flex items-center justify-between text-[#1b140e]"><div class="flex items-center gap-2"><img src="https://via.placeholder.com/40x40.png/dcd6cd/1b140e?text=CM" class="rounded-sm"><span class="text-sm">Ceramic Mug Set</span></div><span>$75.00</span></div>
+                        <div class="flex items-center justify-between text-[#1b140e]"><div class="flex items-center gap-2"><img src="https://via.placeholder.com/40x40.png/dcd6cd/1b140e?text=LJ" class="rounded-sm"><span class="text-sm">Leather Journal</span></div><span>$55.00</span></div>
                     </div>
-                    <button class="w-full mt-6 bg-[#b95c3a] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#a35030] transition-colors duration-300">Proceed to Checkout</button>
+                    <div class="border-t border-[#dcd6cd] pt-3 space-y-2">
+                        <div class="flex justify-between text-[#1b140e]"><span>Subtotal</span><span>$178.00</span></div>
+                        <div class="flex justify-between text-[#1b140e]"><span>Shipping</span><span>$10.00</span></div>
+                        <div class="border-t border-[#dcd6cd] my-2"></div>
+                        <div class="flex justify-between text-xl font-bold text-[#1b140e]"><span>Total</span><span>$188.00</span></div>
+                    </div>
+                    <button class="w-full mt-6 bg-[#b95c3a] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#a35030] transition-colors duration-300">Place Order</button>
                 </div>
             </div>
         </main>
 
-      </div> 
+      </div>
 
       <div class="md:hidden">
         <div class="flex gap-2 border-t border-[#f3ede7] bg-[#fcfaf8] px-4 pb-3 pt-2">
