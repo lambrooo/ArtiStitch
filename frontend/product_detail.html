@@ -1,5 +1,9 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Artigianato Online</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
@@ -7,18 +11,16 @@
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
     />
-
-    <title>Artigianato Online</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script> 
+    <!-- Added typography plugin for prose class -->
+</head>
+<body>
     <div
       class="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] justify-between group/design-root overflow-x-hidden"
       style='font-family: "Work Sans", "Noto Sans", sans-serif;'
     >
-      <div class="max-w-7xl mx-auto w-full"> <!-- Added this wrapper -->
+      <div class="max-w-7xl mx-auto w-full"> 
+        <!-- Copied Header and Search Bar from index.html -->
         <div>
           <div class="flex items-center bg-[#fcfaf8] p-4 pb-2 justify-between">
             <h2 class="text-[#1b140e] text-lg font-bold leading-tight tracking-[-0.015em] text-center pl-12 flex-1 md:text-left md:pl-0 md:flex-initial">Artigianato Online</h2>
@@ -27,7 +29,7 @@
               <a href="#" class="px-3 py-2 text-[#1b140e] hover:text-[#97734e]">About</a>
               <a href="#" class="px-3 py-2 text-[#1b140e] hover:text-[#97734e]">Artisans</a>
             </nav>
-            <div class="flex items-center justify-end md:w-auto"> {/* Ensure this div can accommodate multiple icons on desktop */}
+            <div class="flex items-center justify-end md:w-auto">
               <button
                 class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#1b140e] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
               >
@@ -69,88 +71,72 @@
             </div>
           </label>
         </div>
-        <div class="@container px-4 md:px-6 lg:px-8">
-          <div class="@[480px]:px-4 @[480px]:py-3 md:px-0 lg:px-0">
-            <div
-              class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-[#fcfaf8] @[480px]:rounded-lg min-h-[218px] md:min-h-[300px] lg:min-h-[400px]"
-              style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMDkuKFUiBJ7N5rL4AT_v9rQm-fu7LYiiN8DW1ryhYcu1USA7gPYLwj999fHJEE1Y-Im95IGb4wT5RaBrqxhiJj-pw0GN-OSMsP8wb-yifEFJCTkYPo4n0oFMzjyGjLARKyyFntGDJbXNQnRKRY-60cyr245-FHkbaGjYei7d3HjdWEFq73vvPzdJnD8jEoi3VY7MSqNWdKAa_WiRA6H5IbD1aW_boMopWfalxwmtq2NBsW_NjNlJrnziXJCy_BxoUVGzMg_rVsZh6");'
-            >
-              <div class="flex p-4"><p class="text-white tracking-light text-[28px] font-bold leading-tight">Featured Artist: Anya Petrova</p></div>
+        <!-- End of Copied Header and Search Bar -->
+
+        <!-- Main Content Area -->
+        <main class="max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 py-8">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Left Column (Image Gallery) -->
+                <div>
+                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-4">
+                        <img src="https://via.placeholder.com/600x600.png/f3ede7/1b140e?text=Main+Product+Image" alt="Product Image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <div><img src="https://via.placeholder.com/150x150.png/f3ede7/1b140e?text=Thumb+1" alt="Product Thumbnail 1" class="w-full h-full object-cover rounded-md cursor-pointer border-2 border-[#b95c3a]"></div>
+                        <div><img src="https://via.placeholder.com/150x150.png/f3ede7/1b140e?text=Thumb+2" alt="Product Thumbnail 2" class="w-full h-full object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-[#b95c3a]"></div>
+                        <div><img src="https://via.placeholder.com/150x150.png/f3ede7/1b140e?text=Thumb+3" alt="Product Thumbnail 3" class="w-full h-full object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-[#b95c3a]"></div>
+                        <div><img src="https://via.placeholder.com/150x150.png/f3ede7/1b140e?text=Thumb+4" alt="Product Thumbnail 4" class="w-full h-full object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-[#b95c3a]"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Product Information) -->
+                <div>
+                    <h1 class="text-3xl lg:text-4xl font-bold text-[#1b140e] mb-3">Handwoven Silk Scarf</h1>
+                    <p class="text-md text-[#97734e] mb-3">By Artisan Name</p>
+                    <p class="text-2xl font-semibold text-[#1b140e] mb-4">$120.00</p>
+                    <p class="text-[#3a3a3a] mb-6 leading-relaxed">A brief, elegant description of the product highlighting its uniqueness and craftsmanship. Made with the finest materials and traditional techniques.</p>
+                    <div class="flex items-center mb-6">
+                        <label for="quantity" class="mr-3 text-[#1b140e]">Quantity:</label>
+                        <select id="quantity" class="form-select appearance-none block w-20 px-3 py-1.5 text-base font-normal text-[#1b140e] bg-white bg-clip-padding bg-no-repeat border border-solid border-[#dcd6cd] rounded-lg transition ease-in-out focus:text-[#1b140e] focus:bg-white focus:border-[#97734e] focus:outline-none">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <button class="w-full bg-[#b95c3a] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#a35030] transition-colors duration-300">Add to Cart</button>
+                </div>
             </div>
-          </div>
-        </div>
-        <h2 class="text-[#1b140e] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 md:px-6 lg:px-8 pb-3 pt-5">New Arrivals</h2>
-        <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-3 lg:gap-6 px-4 md:px-6 lg:px-8">
-          <div class="flex items-stretch gap-3 lg:contents"> {/* lg:contents makes this div not interfere with grid layout */}
-            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
-                style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Handwoven+Scarf");'
-              ></div>
-              <div>
-                <p class="text-[#1b140e] text-base font-medium leading-normal">Handwoven Scarf</p>
-                <p class="text-[#97734e] text-sm font-normal leading-normal">$48</p>
-              </div>
+
+            <!-- Full Width Sections Below Columns -->
+            <div class="mt-12 pt-8 border-t border-[#e5e0da]">
+                <h2 class="text-2xl font-bold text-[#1b140e] mb-4">Product Details</h2>
+                <div class="prose max-w-none text-[#3a3a3a] leading-relaxed">
+                    <p>More detailed information about the product. This can include dimensions, materials used, care instructions, and the story behind its creation.</p>
+                    <p>Crafted from 100% ethically sourced Mulberry silk, this scarf measures approximately 70cm x 180cm. The intricate patterns are achieved through a time-honored resist-dyeing technique, passed down through generations of artisans in the Sualkuchi village, known for its rich silk weaving heritage.</p>
+                    <p>Care Instructions: Dry clean only. Store in a cool, dry place away from direct sunlight.</p>
+                    <ul>
+                        <li>100% Mulberry Silk</li>
+                        <li>Handwoven by master artisans</li>
+                        <li>Traditional resist-dyeing technique</li>
+                        <li>Dimensions: 70cm x 180cm (approx.)</li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
-                style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Silver+Earrings");'
-              ></div>
-              <div>
-                <p class="text-[#1b140e] text-base font-medium leading-normal">Silver Earrings</p>
-                <p class="text-[#97734e] text-sm font-normal leading-normal">$75</p>
-              </div>
+
+            <div class="mt-12 pt-8 border-t border-[#e5e0da]">
+                <h2 class="text-2xl font-bold text-[#1b140e] mb-4">Customer Reviews</h2>
+                <p class="text-[#3a3a3a]">No reviews yet. Be the first to review!</p>
+                <!-- Placeholder for review form and list -->
             </div>
-            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
-                style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Carved+Box");'
-              ></div>
-              <div>
-                <p class="text-[#1b140e] text-base font-medium leading-normal">Carved Wooden Box</p>
-                <p class="text-[#97734e] text-sm font-normal leading-normal">$60</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2 class="text-[#1b140e] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 md:px-6 lg:px-8 pb-3 pt-5">Best Sellers</h2>
-        <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-3 lg:gap-6 px-4 md:px-6 lg:px-8">
-          <div class="flex items-stretch gap-3 lg:contents"> {/* lg:contents makes this div not interfere with grid layout */}
-            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
-                style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Leather+Journal");'
-              ></div>
-              <div>
-                <p class="text-[#1b140e] text-base font-medium leading-normal">Leather Journal</p>
-                <p class="text-[#97734e] text-sm font-normal leading-normal">$55</p>
-              </div>
-            </div>
-            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
-                style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Artisan+Candle");'
-              ></div>
-              <div>
-                <p class="text-[#1b140e] text-base font-medium leading-normal">Artisan Candle</p>
-                <p class="text-[#97734e] text-sm font-normal leading-normal">$28</p>
-              </div>
-            </div>
-            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
-                style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Art+Print");'
-              ></div>
-              <div>
-                <p class="text-[#1b140e] text-base font-medium leading-normal">Limited Edition Print</p>
-                <p class="text-[#97734e] text-sm font-normal leading-normal">$90</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="md:hidden"> {/* Changed from lg:hidden to md:hidden */}
+        </main>
+        <!-- End of Main Content Area -->
+
+      </div> <!-- End of max-w-7xl mx-auto w-full -->
+
+      <!-- Copied Mobile Footer Navigation from index.html -->
+      <div class="md:hidden">
         <div class="flex gap-2 border-t border-[#f3ede7] bg-[#fcfaf8] px-4 pb-3 pt-2">
           <a class="just flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#1b140e]" href="#">
             <div class="text-[#1b140e] flex h-8 items-center justify-center" data-icon="House" data-size="24px" data-weight="fill">
@@ -189,7 +175,7 @@
         </div>
         <div class="h-5 bg-[#fcfaf8]"></div>
       </div>
-      </div> <!-- This closes the max-w-7xl mx-auto div -->
+      <!-- End of Copied Mobile Footer Navigation -->
     </div>
-  </body>
+</body>
 </html>
