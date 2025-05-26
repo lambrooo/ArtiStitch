@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Artigianato Online</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] justify-between group/design-root overflow-x-hidden"
+      style='font-family: "Work Sans", "Noto Sans", sans-serif;'
+    >
+      <div class="max-w-7xl mx-auto w-full"> 
+        <!-- Copied Header and Search Bar from index.html -->
+        <div>
+          <div class="flex items-center bg-[#fcfaf8] p-4 pb-2 justify-between">
+            <h2 class="text-[#1b140e] text-lg font-bold leading-tight tracking-[-0.015em] text-center pl-12 flex-1 md:text-left md:pl-0 md:flex-initial">Artigianato Online</h2>
+            <nav class="hidden md:flex flex-grow justify-center">
+              <a href="#" class="px-3 py-2 text-[#1b140e] hover:text-[#97734e]">Shop</a>
+              <a href="#" class="px-3 py-2 text-[#1b140e] hover:text-[#97734e]">About</a>
+              <a href="#" class="px-3 py-2 text-[#1b140e] hover:text-[#97734e]">Artisans</a>
+            </nav>
+            <div class="flex items-center justify-end md:w-auto">
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#1b140e] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
+              >
+                <div class="text-[#b95c3a]" data-icon="ShoppingBag" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <button class="hidden md:flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#1b140e] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 ml-2">
+              <div class="text-[#1b140e]" data-icon="User" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="px-4 py-3 md:px-6 lg:px-8 lg:py-5">
+          <label class="flex flex-col min-w-40 h-12 w-full">
+            <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+              <div
+                class="text-[#97734e] flex border-none bg-[#f3ede7] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                data-icon="MagnifyingGlass"
+                data-size="24px"
+                data-weight="regular"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                </svg>
+              </div>
+              <input
+                placeholder="Search for handmade products"
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#1b140e] focus:outline-0 focus:ring-0 border-none bg-[#f3ede7] focus:border-none h-full placeholder:text-[#97734e] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                value=""
+              />
+            </div>
+          </label>
+        </div>
+        <!-- End of Copied Header and Search Bar -->
+
+        <!-- Main Content Area -->
+        <main class="max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 py-8">
+            <h1 class="text-3xl font-bold text-[#1b140e] mb-6">All Products</h1>
+
+            <!-- Filtering/Sorting Placeholder -->
+            <div class="mb-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex gap-2 flex-wrap"> 
+                    <button class="px-4 py-2 border border-[#dcd6cd] rounded-lg text-[#1b140e] hover:bg-[#f3ede7]">Category <span class="text-xs">&#9662;</span></button>
+                    <button class="px-4 py-2 border border-[#dcd6cd] rounded-lg text-[#1b140e] hover:bg-[#f3ede7]">Price <span class="text-xs">&#9662;</span></button>
+                </div>
+                <div class="relative">
+                    <select class="form-select appearance-none block w-full md:w-auto px-4 py-2 text-base font-normal text-[#1b140e] bg-white bg-clip-padding bg-no-repeat border border-solid border-[#dcd6cd] rounded-lg transition ease-in-out m-0 focus:text-[#1b140e] focus:bg-white focus:border-[#97734e] focus:outline-none">
+                        <option selected>Sort by Latest</option>
+                        <option value="1">Sort by Price: Low to High</option>
+                        <option value="2">Sort by Price: High to Low</option>
+                        <option value="3">Sort by Popularity</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
+                  <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
+                    style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Ceramic+Mug");'></div>
+                  <div>
+                    <p class="text-[#1b140e] text-base font-medium leading-normal">Ceramic Mug</p>
+                    <p class="text-[#97734e] text-sm font-normal leading-normal">$35.00</p>
+                  </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
+                  <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
+                    style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Linen+Scarf");'></div>
+                  <div>
+                    <p class="text-[#1b140e] text-base font-medium leading-normal">Linen Scarf</p>
+                    <p class="text-[#97734e] text-sm font-normal leading-normal">$48.00</p>
+                  </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
+                  <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
+                    style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Wooden+Bowl");'></div>
+                  <div>
+                    <p class="text-[#1b140e] text-base font-medium leading-normal">Wooden Bowl</p>
+                    <p class="text-[#97734e] text-sm font-normal leading-normal">$62.00</p>
+                  </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
+                  <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
+                    style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Silver+Necklace");'></div>
+                  <div>
+                    <p class="text-[#1b140e] text-base font-medium leading-normal">Silver Necklace</p>
+                    <p class="text-[#97734e] text-sm font-normal leading-normal">$120.00</p>
+                  </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
+                  <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
+                    style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Leather+Wallet");'></div>
+                  <div>
+                    <p class="text-[#1b140e] text-base font-medium leading-normal">Leather Wallet</p>
+                    <p class="text-[#97734e] text-sm font-normal leading-normal">$75.00</p>
+                  </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
+                  <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
+                    style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Artisan+Soap");'></div>
+                  <div>
+                    <p class="text-[#1b140e] text-base font-medium leading-normal">Artisan Soap</p>
+                    <p class="text-[#97734e] text-sm font-normal leading-normal">$12.00</p>
+                  </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
+                  <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
+                    style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Beeswax+Candle");'></div>
+                  <div>
+                    <p class="text-[#1b140e] text-base font-medium leading-normal">Beeswax Candle</p>
+                    <p class="text-[#97734e] text-sm font-normal leading-normal">$18.00</p>
+                  </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40 lg:min-w-0 transition-shadow duration-300 ease-in-out hover:shadow-lg">
+                  <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105"
+                    style='background-image: url("https://via.placeholder.com/300x300.png/f3ede7/1b140e?text=Clay+Planter");'></div>
+                  <div>
+                    <p class="text-[#1b140e] text-base font-medium leading-normal">Clay Planter</p>
+                    <p class="text-[#97734e] text-sm font-normal leading-normal">$42.00</p>
+                  </div>
+                </div>
+            </div>
+        </main>
+        <!-- End of Main Content Area -->
+
+      </div> <!-- End of max-w-7xl mx-auto w-full -->
+
+      <!-- Copied Mobile Footer Navigation from index.html -->
+      <div class="md:hidden">
+        <div class="flex gap-2 border-t border-[#f3ede7] bg-[#fcfaf8] px-4 pb-3 pt-2">
+          <a class="just flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#1b140e]" href="#">
+            <div class="text-[#1b140e] flex h-8 items-center justify-center" data-icon="House" data-size="24px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"
+                ></path>
+              </svg>
+            </div>
+          </a>
+          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#97734e]" href="#">
+            <div class="text-[#97734e] flex h-8 items-center justify-center" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+              </svg>
+            </div>
+          </a>
+          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#97734e]" href="#">
+            <div class="text-[#97734e] flex h-8 items-center justify-center" data-icon="Heart" data-size="24px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"
+                ></path>
+              </svg>
+            </div>
+          </a>
+          <a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#97734e]" href="#">
+            <div class="text-[#97734e] flex h-8 items-center justify-center" data-icon="User" data-size="24px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </div>
+        <div class="h-5 bg-[#fcfaf8]"></div>
+      </div>
+      <!-- End of Copied Mobile Footer Navigation -->
+    </div>
+</body>
+</html>
